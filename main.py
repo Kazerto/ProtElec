@@ -22,6 +22,7 @@ app = FastAPI(
 class NearestPoleResponse(BaseModel):
     nearest_pole: str
     distance: float
+    quartier: str
 
 # Endpoint pour trouver le poteau le plus proche
 @app.get("/nearest-pole", response_model=NearestPoleResponse)
